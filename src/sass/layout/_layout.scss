@@ -1,0 +1,19 @@
+
+
+
+// md_layout
+.l-wrap {
+  width: 100%;
+}
+
+.l-inner {
+  width: 100%;
+  max-width: get_vw(640);
+  margin-left: auto;
+  margin-right: auto;
+  @include breakPoint($sp) {
+    max-width: 1220px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

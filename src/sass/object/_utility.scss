@@ -1,0 +1,28 @@
+
+
+.disp-pc {
+  display: none;
+  @include breakPoint($sp) {
+    display: block;
+  }
+}
+
+.disp-sp {
+  display: block;
+  @include breakPoint($sp) {
+    display: none;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+

@@ -1,0 +1,42 @@
+//mixin
+
+// calc
+// vw 750幅計算
+@function get_vw($size){
+  $viewport: 750;
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+
+// rem
+@function get_rem($size: 24, $base: 16) {
+  @return (($size / ($base * 0.625)) + rem);
+}
+
+// %計算　$selfが対象セレクターの幅　$parentが対象の親の幅
+@function get_per($self, $parent) {
+  @return $self / $parent * 100%;
+}
+
+// letterspacing
+@function get_letter_spacing($size) {
+  @return $size / 1000 * 1em;
+}
+
+// lineheight
+@function get_line-height($font, $lh) {
+  @return $lh / $font;
+}
+
+// transition
+@function get_transition() {
+  @return all cubic-bezier(0.77, 0.2, 0.05, 1) .2s;
+}
+
+
+// breakpoint
+@mixin breakPoint($devicePoint){
+  @media screen and (min-width:$devicePoint){
+    @content;
+  }
+}

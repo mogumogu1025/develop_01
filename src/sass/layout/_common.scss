@@ -1,0 +1,52 @@
+
+html {
+  font-size: 62.5%;
+  font-family: $base;
+  @include breakPoint($sp) {}
+}
+
+body {
+  font-size: get_vw(26);
+  line-height: get_line-height(26, 52);
+  word-wrap : break-word;
+  overflow-wrap : break-word;
+  @include breakPoint($sp) {
+    font-size: 1.6rem;
+    line-height: get_line-height(16, 28);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, p, dl, dt, ul, ol, li, div, span, dl ,dt, dd {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  color: $c-black;
+  text-decoration: none;
+  @include breakPoint($sp) {
+    transition: get_transition();
+    opacity: 1;
+    &:hover {
+      opacity: .6;
+    }
+  }
+}
+
+table th {
+  font-weight: normal;
+}
+
+svg {
+  width: 100%;
+  height: auto;
+}

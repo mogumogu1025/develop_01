@@ -1,0 +1,7 @@
+.top {
+  @include breakPoint($sp) {
+  }
+}
+p {
+  color: #0ff
+}
